@@ -10,7 +10,7 @@ public class UnitTesterWorker extends SwingWorker<Object, Object> {
     private UnitTester unitTester;
 
     /**
-     * Contructor for the UnitTester worker.
+     * Constructor for the UnitTester worker.
      * @param classname name to test.
      * @param frame frame to apped results to.
      */
@@ -34,7 +34,8 @@ public class UnitTesterWorker extends SwingWorker<Object, Object> {
                 frame.textArea.append("Specify class name above\n");
                 append = false;
             } else {
-                frame.textArea.append("Class \"" + className + "\" not found\n");
+                frame.textArea.append("Class \"" +
+                                       className + "\" not found\n");
                 append = false;
             }
         }
@@ -50,9 +51,12 @@ public class UnitTesterWorker extends SwingWorker<Object, Object> {
             for (String s : unitTester.results) {
                 frame.setTextArea(s);
             }
-            frame.setTextArea("\n" + unitTester.success + " test(s) succeeded\n");
-            frame.setTextArea(unitTester.fail + " test(s) failed\n");
-            frame.setTextArea(unitTester.exceptionFail + " test(s) failed because of an exception\n");
+            frame.setTextArea("\n" + unitTester.success
+                              + " test(s) succeeded\n");
+            frame.setTextArea(unitTester.fail
+                              + " test(s) failed\n");
+            frame.setTextArea(unitTester.exceptionFail
+                              + " test(s) failed because of an exception\n");
         }
     }
 }
