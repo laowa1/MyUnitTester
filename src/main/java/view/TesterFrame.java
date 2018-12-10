@@ -75,7 +75,7 @@ public class TesterFrame extends JFrame {
 	}
 	
 	/**
-	 * Creates the upper panel and adds a button 
+	 * Creates the upper panel and adds a JButton
 	 * with an actionListener.
 	 * @return JPanel object.
 	 */
@@ -89,7 +89,7 @@ public class TesterFrame extends JFrame {
 	}
 	
 	/**
-	 * Creates the lower panel and adds a button 
+	 * Creates the lower panel and adds a JButton
 	 * with an actionListener.
 	 * @return JPanel object.
 	 */
