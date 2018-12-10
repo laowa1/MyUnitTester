@@ -125,7 +125,7 @@ public class UnitTester {
 	/**
 	 * Tests individual methods by invoking setUp if possible,
 	 * invoking the method and the invoking tearDown if possible.
-	 * @param m - Method to test.
+	 * @param m Method to test.
 	 */
 	private void testMethod(Method m){
 		try {
