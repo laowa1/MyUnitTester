@@ -36,9 +36,10 @@ public class Controller {
 			if (actionEvent.getSource() == frame.getRunButton()) {
 				try {
 					String className = frame.getInput();
-					UnitTesterWorker unitTesterWorker = new UnitTesterWorker(className, frame);
-					unitTesterWorker.execute();
-					unitTesterWorker.get();
+					UnitTesterWorker uWorker
+							           = new UnitTesterWorker(className, frame);
+					uWorker.execute();
+					uWorker.get();
 				} catch (InterruptedException | ExecutionException e) {
 					frame.setTextArea(e.getMessage());
 				}
