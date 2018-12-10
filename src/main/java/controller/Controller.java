@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutionException;
 /**
  * Controller class for starting a test instance.
  * @UserID - tfy17jfo
- * @date - 2018-11-21
+ * @date - 2018-12-10
  * @version 1.0
  * @author Jakob Fridesjö
  */
