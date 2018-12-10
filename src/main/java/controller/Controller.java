@@ -14,7 +14,6 @@ import java.util.concurrent.ExecutionException;
  * @version 1.0
  * @author Jakob Fridesjö
  */
-
 public class Controller {
 	private TesterFrame frame;
 
