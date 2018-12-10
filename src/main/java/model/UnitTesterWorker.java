@@ -1,8 +1,16 @@
 package model;
 
 import view.TesterFrame;
+
 import javax.swing.*;
 
+/**
+ * Class for creating a worker to avoid locking the GUI while testing.
+ * @UserID - tfy17jfo
+ * @date - 2018-12-10
+ * @version 1.0
+ * @author Jakob Fridesjö
+ */
 public class UnitTesterWorker extends SwingWorker<Object, Object> {
     private TesterFrame frame;
     private boolean append;
