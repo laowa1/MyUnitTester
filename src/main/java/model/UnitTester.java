@@ -12,17 +12,17 @@ import java.util.List;
  * @version 1.0
  * @author Jakob Fridesjö
  */
-public class UnitTester {
-	public int fail = 0;
-	public int success = 0;
-	public int exceptionFail = 0;
+class UnitTester {
+	int fail = 0;
+	int success = 0;
+	int exceptionFail = 0;
 	private Method[] testClassMethods;
 	private Method setUp = null;
 	private Method tearDown = null;
 	private Class<?> testClass;
 	private Constructor<?>[] testClassConstructor;
 	private Object classInstance;
-	public List<String> results = new ArrayList<String>();
+	List<String> results = new ArrayList<String>();
 
 
 
@@ -31,7 +31,7 @@ public class UnitTester {
 	 * @param className
 	 * @throws ClassNotFoundException
 	 */
-	public UnitTester(String className) throws ClassNotFoundException{
+    UnitTester(String className) throws ClassNotFoundException{
 		testClass = Class.forName(className);
 		testClassMethods = testClass.getDeclaredMethods();
 		testClassConstructor = testClass.getDeclaredConstructors();
@@ -40,7 +40,7 @@ public class UnitTester {
 	/**
 	 * Verifies the class
 	 */
-	public void verifyTheClass() {
+    void verifyTheClass() {
 		implementsInterface(testClass, se.umu.cs.unittest.TestClass.class);
 		canBeInstantiated();
 		hasSetUp();
@@ -51,7 +51,7 @@ public class UnitTester {
 	/**
 	 * Tests the class
 	 */
-	public void testTheClass() {
+    void testTheClass() {
 		try {
 		    classInstance = testClass.newInstance();
 		    for (Method m : testClassMethods) {
@@ -68,7 +68,7 @@ public class UnitTester {
 	
 	/**
 	 * Checks if class can be instantiated.
-	 * @return
+	 * @return boolean
 	 */
 	private boolean canBeInstantiated(){
 		if (testClass.isInterface()) {
