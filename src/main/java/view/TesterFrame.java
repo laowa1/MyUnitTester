@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  * @author Jakob Fridesjö
  */
 public class TesterFrame extends JFrame {
-	
+    
 	private static final long serialVersionUID = 1L;
 	private final int F_WIDTH = 640;
 	private final int F_HEIGHT = 480;
@@ -21,7 +21,7 @@ public class TesterFrame extends JFrame {
 	private JButton runButton;
 	private JButton clearButton;
 	public JTextArea textArea;
-	
+
 	/**
 	 * Constructor for MyUnitTester.
 	 * Creates an frame and adds the elements.
